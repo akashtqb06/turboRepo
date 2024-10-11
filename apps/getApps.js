@@ -9,7 +9,7 @@ if (!appName) {
     process.exit(1);
 }
 
-const appRepoUrl = `https://github.com/akashtqb06/${appName}.git`;
+const appRepoUrl = `https://github.com/your-org/${appName}.git`;
 const appFolder = path.join(__dirname, 'apps', appName);
 
 function cloneApp(appRepoUrl, appFolder) {
@@ -26,7 +26,13 @@ function cloneApp(appRepoUrl, appFolder) {
 
 try {
     cloneApp(appRepoUrl, appFolder);
+
+    // Run npm install after cloning or updating the repo
+    console.log(`\x1b[36mRunning npm install in ${appFolder}...\x1b[0m`);
+    execSync(`npm install`, { cwd: appFolder, stdio: 'inherit' });
+    console.log(`\x1b[32mSuccessfully installed dependencies for ${appName}.\x1b[0m`);
+    
 } catch (error) {
-    console.error(`\x1b[31mFailed to clone or update ${appName}. Please check the app name or the repository URL.\x1b[0m`);
+    console.error(`\x1b[31mFailed to clone, update, or install dependencies for ${appName}. Please check the app name or the repository URL.\x1b[0m`);
     process.exit(1);
 }
