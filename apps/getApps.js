@@ -9,7 +9,7 @@ if (!appName) {
     process.exit(1);
 }
 
-const appRepoUrl = `https://github.com/your-org/${appName}.git`;
+const appRepoUrl = `https://github.com/akashtqb06/${appName}.git`;
 const appFolder = path.join(__dirname, 'apps', appName);
 
 function cloneApp(appRepoUrl, appFolder) {
