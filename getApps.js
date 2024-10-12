@@ -26,8 +26,6 @@ function cloneApp(appRepoUrl, appFolder) {
 
 try {
     cloneApp(appRepoUrl, appFolder);
-
-    // Run npm install after cloning or updating the repo
     console.log(`\x1b[36mRunning npm install in ${appFolder}...\x1b[0m`);
     execSync(`npm install`, { cwd: appFolder, stdio: 'inherit' });
     console.log(`\x1b[32mSuccessfully installed dependencies for ${appName}.\x1b[0m`);
