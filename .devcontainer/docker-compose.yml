@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: ..  # Specifies the build context (parent directory)
+      dockerfile: .devcontainer/Dockerfile  # Path to the Dockerfile in the .devcontainer directory
+    container_name: stunning-braccoli
+    image: stunning-braccoli-sites
+    volumes:
+      - stunning-braccoli-volume:/workspace  # Mounts the volume to /workspace
+    ports:
+      - "3000:3000"  # Maps port 3000
+      - "3001:3001"  # Maps port 3001
+    command: >
+      sh -c "
+        npm install &&  # Install dependencies
+        npm run dev      # Start the application
+      "  # Command to execute when the container starts
+
+volumes:
+  stunning-braccoli-volume:  # Defines the volume

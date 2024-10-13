@@ -1,0 +1,30 @@
+{
+  "name": "Stunning braccoli",
+  "dockerComposeFile": "docker-compose.yml",  // Correct key for Docker Compose
+  "service": "app",  // Specify the service name to connect to
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+  "postCreateCommand": "npm run dev",
+  "forwardPorts": [3000, 3001],
+  "portsAttributes": {
+    "3000": {
+      "label": "website"
+    },
+    "3001": {
+      "label": "blog"
+    }
+  },
+  "mounts": [
+    "source=stunning-braccoli-volume,target=/workspace,type=volume"
+  ]
+}

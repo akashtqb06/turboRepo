@@ -1,0 +1,11 @@
+{
+    "remote.containers.portsAttributes": {
+      "3000": {
+        "label": "Next.js website"
+      },
+      "3001": {
+        "label": "Next.js blog"
+      }
+    }
+  }
+  
