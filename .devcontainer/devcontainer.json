@@ -1,8 +1,9 @@
 {
-  "name": "Stunning braccoli",
-  "dockerComposeFile": "docker-compose.yml",  // Correct key for Docker Compose
-  "service": "app",  // Specify the service name to connect to
+  "name": "Stunning Braccoli",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
   "workspaceFolder": "/workspace",
+  "postStartCommand": "echo 'Container started. You can run your commands now.' && /bin/sh",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,7 +15,6 @@
       }
     }
   },
-  "postCreateCommand": "npm run dev",
   "forwardPorts": [3000, 3001],
   "portsAttributes": {
     "3000": {

@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   app:
     build:
@@ -11,11 +10,6 @@ services:
     ports:
       - "3000:3000"  # Maps port 3000
       - "3001:3001"  # Maps port 3001
-    command: >
-      sh -c "
-        npm install &&  # Install dependencies
-        npm run dev      # Start the application
-      "  # Command to execute when the container starts
 
 volumes:
   stunning-braccoli-volume:  # Defines the volume

@@ -7,8 +7,9 @@ WORKDIR /workspace
 # Copy the entire project into the container
 COPY . .
 
+
 # Install dependencies
 RUN npm install
 
-# Specify the default command to run your app
-CMD ["npm", "run", "dev"]
+# Use a shell to keep the container running
+CMD ["sh", "-c", "while :; do sleep 1; done"]
