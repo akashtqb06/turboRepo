@@ -28,6 +28,7 @@ build
 dist
 apps/blog
 apps/website
+apps/strapi-cms
 
 
 # Debug
