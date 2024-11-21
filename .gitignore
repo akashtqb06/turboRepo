@@ -29,6 +29,7 @@ dist
 apps/blog
 apps/website
 apps/strapi-cms
+apps/storybook
 
 
 # Debug
@@ -39,3 +40,4 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
++ storybook-static

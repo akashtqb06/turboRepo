@@ -1,9 +1,2 @@
-// If you want to use other PostCSS plugins, see the following:
-// https://tailwindcss.com/docs/using-with-preprocessors
-
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+module.exports = require("@repo/tailwind-config/postcss.config");

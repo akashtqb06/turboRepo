@@ -15,8 +15,6 @@ export function Card({
     <a
       className={`${styles.anchor} group`}
       href={href}
-      // rel="noopener noreferrer"
-      // target="_blank"
     >
       <h2 className={styles.titleh1}>
         {title}{" "}
