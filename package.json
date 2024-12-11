@@ -9,7 +9,8 @@
     "clean": "turbo clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "get-app": "node getApps.js",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "ui": "npm run ui --workspace @repo/ui"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
@@ -32,8 +33,5 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "dependencies": {
-    "@module-federation/nextjs-mf": "^8.6.3"
-  }
+  ]
 }

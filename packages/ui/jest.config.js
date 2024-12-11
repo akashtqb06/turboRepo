@@ -1,14 +1,10 @@
-const { defaults } = require('jest-config');
+const sharedConfig = require('@repo/jest-config/jest.config');
 
 module.exports = {
-  preset: 'ts-jest', // If using TypeScript
-  testEnvironment: 'jsdom', // Browser-like testing
-  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
-  setupFilesAfterEnv: ['@testing-library/jest-dom'], // Add Jest DOM matchers
+  ...sharedConfig,
+  displayName: 'ui', // Identifies this package in test reports
+  testMatch: ['<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)'],
   transform: {
-    '^.+\\.tsx?$': 'ts-jest', // Transpile TypeScript
-  },
-  moduleNameMapper: {
-    '\\.css$': 'jest-transform-stub',  // This will mock CSS imports
+    "^.+\\.[tj]sx?$": "ts-jest",
   }
-};
+}
