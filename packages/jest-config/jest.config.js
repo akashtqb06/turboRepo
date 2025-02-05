@@ -9,5 +9,5 @@ module.exports = {
   moduleNameMapper: {
     '\\.css$': 'jest-transform-stub', // Mock CSS imports
   },
-  
+  collectCoverage: true,
 };
